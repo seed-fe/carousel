@@ -1,0 +1,13 @@
+.Container { width: 1200px; margin: 0px auto; overflow: hidden;}
+.clear { clear: both; display: block; font-size: 0; height: 0; line-height: 0; overflow: hidden; }
+.OneTLeft { float: left; }
+.fl {float: left;}
+.OneTRight { float: right; }
+.fr {float: right;}
+.CommonRedBj { background: #cd0100; color: #fff; }
+.emColor0 { margin-right: 14px; color: #000; background-image: url(../img/index.png); background-repeat: no-repeat; background-position: 0 3px; padding-left: 15px;}
+.emColor{ color: #ff0000;}
+// body {min-width: 1380px;}
+body {min-width: 1200px; overflow-x: hidden;}
+.abs {position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto;}
+.el {word-break: keep-all; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}

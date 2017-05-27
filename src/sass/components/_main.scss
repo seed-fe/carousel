@@ -1,0 +1,19 @@
+#slides {
+	width: 100%;
+	height: 420px;
+}
+.slide-li {
+	width: 100%;
+	height: 420px;
+	a {
+		display: inline-block;
+		width: 100%;
+		height: 420px;
+		position: relative;
+	}
+	img {
+		position: absolute;
+		left: 50%;
+		margin-left: -960px;
+	}
+}
