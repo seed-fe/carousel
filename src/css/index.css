@@ -120,13 +120,18 @@ body {
   text-overflow: ellipsis;
 }
 
-#slides {
+#slideCon {
+  position: relative;
   width: 100%;
+  overflow: hidden;
+}
+
+#slides {
   height: 420px;
 }
 
 .slide-li {
-  width: 100%;
+  width: 1920px;
   height: 420px;
 }
 
@@ -141,6 +146,22 @@ body {
   position: absolute;
   left: 50%;
   margin-left: -960px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  background-color: #f24645;
+  width: 30px;
+  height: 30px;
+}
+
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
 }
 
 /*# sourceMappingURL=index.css.map */
