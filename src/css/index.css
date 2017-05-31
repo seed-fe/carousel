@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body, ul, p, h1, h2, h3, h4, h5, h6, td, th, dl, dd, dt, input, ol, div, a, img {
+body, ul, p, h1, h2, h3, h4, h5, h6, td, th, dl, dd, dt, input, ol, div, a, img, button {
   margin: 0px;
   padding: 0px;
 }
@@ -19,6 +19,10 @@ ul, li {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+}
+
+button {
   cursor: pointer;
 }
 
@@ -126,12 +130,11 @@ body {
 }
 
 #slides {
-  position: absolute;
+  position: relative;
   height: 420px;
 }
 
 .slide-li {
-  width: 1920px;
   height: 420px;
 }
 
@@ -139,6 +142,34 @@ body {
   display: inline-block;
   height: 420px;
   position: relative;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -80px;
+  width: 160px;
+}
+
+.buttons li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.buttons button {
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.on button {
+  background-color: #fff;
 }
 
 .prev, .next {
