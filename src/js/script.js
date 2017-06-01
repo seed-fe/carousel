@@ -37,7 +37,7 @@ $(document).ready(function() {
                 index = 1;
                 left = -imgWidth;
             }
-            $('.buttons li').eq(index - 1).addClass('on').siblings().removeClass('on');
+            buttons.eq(index - 1).addClass('on').siblings().removeClass('on');
         });
     });
     $('.prev').on('click', function(e) {
