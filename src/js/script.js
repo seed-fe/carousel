@@ -28,22 +28,23 @@ $(document).ready(function() {
     
     // 左右箭头切换
     $('.next').on('click', function(e) {
-        left -= imgWidth;
+        slideTo(-imgWidth, 1);
+    });
+    $('.prev').on('click', function(e) {
+        slideTo(imgWidth, -1);
+    });
+    function slideTo (offset, indexP) {
+        // body... 
+        left += offset;
         $('#slides').stop(true, true).animate({left: left + 'px'}, 800, function() {
-            index += 1;
+            index += indexP;
             if (index > slideNum - 2) {
                 // 这里必须把css的left值复位的语句放在animate方法的complete回调函数里，否则由于异步性，会先执行-1920px的语句，然后800ms后执行完毕animate方法，又把left值改为-9600px，无法实现无缝滚动
                 $('#slides').css('left', -imgWidth + 'px');
                 index = 1;
                 left = -imgWidth;
+                return;
             }
-            buttons.eq(index - 1).addClass('on').siblings().removeClass('on');
-        });
-    });
-    $('.prev').on('click', function(e) {
-        left += imgWidth;
-        $('#slides').stop(true, true).animate({left: left + 'px'}, 800, function() {
-            index -= 1;
             if (index < 1) {
                 // 这里必须把css的left值复位的语句放在animate方法的complete回调函数里，否则由于异步性，会先执行-1920px的语句，然后800ms后执行完毕animate方法，又把left值改为-9600px，无法实现无缝滚动
                 $('#slides').css('left', -imgWidth*(slideNum - 2) + 'px');
@@ -51,8 +52,8 @@ $(document).ready(function() {
                 left = -imgWidth*(slideNum - 2);
             }
             buttons.eq(index - 1).addClass('on').siblings().removeClass('on');
-        })
-    });
+        });
+    }
     // 下方圆按钮切换
     buttons.on('mouseenter', function(e) {
         var buttonIndex = buttons.index($(this)) + 1;
